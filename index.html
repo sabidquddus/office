@@ -1,0 +1,88 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Be My Valentine?</title>\
+    <style>\
+        body \{\
+            text-align: center;\
+            font-family: Arial, sans-serif;\
+            background-color: #fbe4e4;\
+        \}\
+        .container \{\
+            margin-top: 50px;\
+        \}\
+        h1 \{\
+            color: #ff4d6d;\
+        \}\
+        .gif \{\
+            width: 300px;\
+            height: auto;\
+            margin: 20px;\
+        \}\
+        .buttons \{\
+            margin-top: 20px;\
+        \}\
+        .btn \{\
+            padding: 15px 30px;\
+            font-size: 18px;\
+            color: white;\
+            border: none;\
+            border-radius: 10px;\
+            cursor: pointer;\
+            margin: 10px;\
+        \}\
+        .yes-btn \{\
+            background-color: #ff4d6d;\
+        \}\
+        .no-btn \{\
+            background-color: #555;\
+        \}\
+        .no-btn:hover \{\
+            position: absolute;\
+            left: 20px;\
+            top: 20px;\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+    <div class="container">\
+        <h1>J, will you be my Valentine? \uc0\u10084 \u65039 </h1>\
+        \
+        <img src="images/michael_scott.gif" alt="Michael Scott GIF" class="gif">\
+\
+        <div class="buttons">\
+            <button class="btn yes-btn" onclick="showLove()">Yes!</button>\
+            <button class="btn no-btn" onmouseover="moveButton()">No</button>\
+        </div>\
+        \
+        <p id="response" style="display:none; font-size: 24px; color: #ff4d6d; margin-top: 20px;"></p>\
+    </div>\
+\
+    <script>\
+        function showLove() \{\
+            document.getElementById('response').style.display = 'block';\
+            document.getElementById('response').innerHTML = "Yay! Best Valentine ever! \uc0\u55356 \u57225 \u10084 \u65039 ";\
+        \}\
+\
+        function moveButton() \{\
+            let x = Math.random() * (window.innerWidth - 100);\
+            let y = Math.random() * (window.innerHeight - 50);\
+            document.querySelector('.no-btn').style.position = "absolute";\
+            document.querySelector('.no-btn').style.left = x + "px";\
+            document.querySelector('.no-btn').style.top = y + "px";\
+        \}\
+    </script>\
+\
+</body>\
+</html>\
+}
